@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const questionRoute = require('./api/route/question');
-// const transactionRoute = require('./api/routes/transactions')
+const categoryRoute = require('./api/route/category')
 // const headRoute = require('./api/routes/heads')
 // const tranRoute = require('./api/routes/trans')
 
@@ -42,6 +42,7 @@ app.use((req,res,next)=>{
 
 // This is the Api Route for Routing 
 app.use('/questions',questionRoute);
+app.use('/categories',categoryRoute);
 // app.use('/heads',headRoute);
 
 
